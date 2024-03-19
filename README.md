@@ -54,6 +54,31 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
  <li>If Not Visited, add it to the STACK. Else Call The Function Again Until No more nodes needs to be visited.</li>
 </ol></B>
 
+### Program:
+```
+
+from collections import defaultdict
+def dfs(g,s,vi,p):
+    p.append(s)
+    vi[s]=True
+    for ne in g[s]:
+        if vi[ne]==False:
+             dfs(g,ne,vi,p)
+             vi[ne]=True
+    return p
+g=defaultdict(list)
+n,e=map(int,input().split())
+for i in range(e):
+    u,v=map(str,input().split())
+    g[u].append(v)
+    g[v].append(u)
+st=input()
+vi=defaultdict(bool)
+p=[]
+tdp=dfs(g,st,vi,p)
+print(tdp)
+```
+
 <hr>
 <h3>Sample Input</h3>
 <hr>
@@ -87,6 +112,8 @@ F H <BR>
 <h3>Sample Output</h3>
 <hr>
 ['0', '1', '2', '3', '4']
+<h3>Output</h3>
+![Screenshot 2024-03-19 140022](https://github.com/SaiVishal1105/19AI405ExpNo2/assets/145742557/2e56554b-b86f-443a-849e-a6578d12ae29)
 
 <hr>
 <h3>Result:</h3>
