@@ -112,8 +112,6 @@ F H <BR>
 <h3>Sample Output</h3>
 <hr>
 ['0', '1', '2', '3', '4']
-<h3>Output</h3>
-![Screenshot 2024-03-19 140022](https://github.com/SaiVishal1105/19AI405ExpNo2/assets/145742557/2e56554b-b86f-443a-849e-a6578d12ae29)
 
 <hr>
 <h3>Result:</h3>
